@@ -55,39 +55,78 @@ optional arguments:
 
 ```
 
-
-
 ### Query Current Instances
-As the name stated this allows the user to query 
+As the name stated this allows the user to query instances related to your account. This queries all instances for now and prints certain key parameters(these are a subset that I selected for my use) but can be easily modified in the code to print other information.
 
 ```
+usage: jetstream.py instance [-h] [--username USERNAME] [--password PASSWORD]
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --username USERNAME  Jetstream API username
+  --password PASSWORD  Jetstream API password: "Optional if you already saved
+                       jetstream key"
+```
+Incase you have already saved your password a setup would be simply
 
 ```
-An example setup would be
+python jetstream.py instance --username "johndoe"
 ```
-
+if not
 ```
-
-
-
-## Download DEM
-
-
+python jetstream.py instance --username "johndoe" --password "pass"
 ```
+## Query Current Volumes
+The current volume options queries current volumes on your project. Note that the current info does not tell you which instance a volume is attached to which might be a nice endpoint readout to have.
 
 ```
-An example setup would be
+usage: jetstream.py volume [-h] [--username USERNAME] [--password PASSWORD]
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --username USERNAME  Jetstream API username
+  --password PASSWORD  Jetstream API password: "Optional if you already saved
+                       jetstream key"
 ```
-arcticdem demdownload --subset "C:\users\master_aoi.shp" --destination "C:\users\ArcticDEM"
+Incase you have already saved your password a setup would be simply
+```
+python jetstream.py volume --username "johndoe"
+```
+if not
+```
+python jetstream.py volume --username "johndoe" --password "pass"
 ```
  
-## Extract DEM
-
-
-```
+## Perform Instance Actions
+This is perhaps one of the most important aspect of building this tool, the idea was to get a read out or a email message when a system has been idle for sometime and then auto shutdown or initiate a shutdown remotely. This command allows you to choose the instance you want to perform an instance action using the instance ID mentioned on your instance profile page. The next thing you need to know is what kind of action you want to perform. There are certain things that will create a conflict, for example: If you are trying to shutdown an already shutoff system or start an already active system. In that case it will print out a conflict message.
 
 ```
-An example setup would be
+usage: jetstream.py action [-h] [--username USERNAME] [--password PASSWORD]
+                           [--id ID] [--action ACTION]
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --username USERNAME  Jetstream API username
+  --password PASSWORD  Jetstream API password: "Optional if you already saved
+                       jetstream key"
+  --id ID              Jetstream Instance ID on your Instance Detail Page
+  --action ACTION      Jetstream Instance Action,
+                       "start|stop|suspend|resume|reboot"
 ```
-arcticdem demdextract --folder "C:\users\ArcticDEM" --destination "C:\users\ArcticDEM\Extract" --action "yes"
+Incase you have already saved your password a setup would be simply
+```
+python jetstream.py action --username "johndoe" --id "00000" --action "start"
+```
+if not 
+```
+python jetstream.py action --username "johndoe" --password "pass" --id "00000" --action "start"
+```
+
+I would like to thank my grant from JetStream TG-GEO160014. And I would like to include Jetstream citations for others to use
+```
+Stewart, C.A., Cockerill, T.M., Foster, I., Hancock, D., Merchant, N., Skidmore, E., Stanzione, D., Taylor, J., Tuecke, S., Turner, G., Vaughn, M., and Gaffney, N.I., Jetstream: a self-provisioned, scalable science and engineering cloud environment. 2015, In Proceedings of the 2015 XSEDE Conference: Scientific Advancements Enabled by Enhanced Cyberinfrastructure. St. Louis, Missouri.  ACM: 2792774.  p. 1-8. http://dx.doi.org/10.1145/2792745.2792774 
+
+and
+
+John Towns, Timothy Cockerill, Maytal Dahan, Ian Foster, Kelly Gaither, Andrew Grimshaw, Victor Hazlewood, Scott Lathrop, Dave Lifka, Gregory D. Peterson, Ralph Roskies, J. Ray Scott, Nancy Wilkins-Diehr, "XSEDE: Accelerating Scientific Discovery", Computing in Science & Engineering, vol.16, no. 5, pp. 62-74, Sept.-Oct. 2014, doi:10.1109/MCSE.2014.80
 ```
