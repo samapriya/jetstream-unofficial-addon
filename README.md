@@ -1,6 +1,5 @@
 # JetStream Unofficial Addon for Atmosphere VM
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.841299.svg)](https://doi.org/10.5281/zenodo.841299)
-[![PGC](https://img.shields.io/badge/PGC-BootCamp%202017-green.svg)](https://www.pgc.umn.edu/)
+[![JetStream](https://img.shields.io/badge/SupportedBy%3A-JetStream-brightgreen.svg)](https://jetstream-cloud.org/)
 
 
 ArcticDEM project was a joint project supported by both the National Geospatial-Intelligence Agency(NGA) and the National Science Foundation(NSF) with the idea of creating a high resolution and high quality digital surface model(DSM). The product is distributed free of cost as time-dependent DEM strips and is hosted as https links that a user can use to download each strip. As per their policy
@@ -22,6 +21,8 @@ You can find details on the background, scope and methods among other details [h
 A detailed acknowledgement link can be found [here](https://www.pgc.umn.edu/guides/user-services/acknowledgement-policy/)
 
 With this in mind and with the potential applications of using these toolsets there was a need to batch download the DEM files for your area of interest and to be able to extract, clean and process metadata. In all fairness this tool has a motive of extending this as an input to Google Earth Engine and hence the last tool which is the metadata parser is designed to create a metadata manifest in a csv file which GEE can understand and associate during asset upload. 
+
+![CLI](http://i.imgur.com/52eJzp6.gif)
 
 ## Table of contents
 * [Usage examples](#usage-examples)
