@@ -1,4 +1,5 @@
 # Jetstream Unofficial Addon for Atmosphere VM(s)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.844018.svg)](https://doi.org/10.5281/zenodo.844018)
 [![Jetstream](https://img.shields.io/badge/SupportedBy%3A-JetStream-brightgreen.svg)](https://jetstream-cloud.org/)
 
 Jetstream provides researchers and students with a unique approach to cloud computing and data analysis on demand. Moving away from a job submission model which is more pervasice on High Performance Cluster computing this allows users to create user-friendly installs of “virtual machines” which can then be custom installed with softwares and packages and even imaged further to make science replicable. The system in theory also allows a BYoOS (Bring your own Operating System) designed to further allow more flexibility while sharing the backbone of high performance compute and cloud storage infrastructure. The idea of imaging a system allows the user to not only share their data or analysis but their entire setup that allows them to run the analysis making it a plug and play model in terms of research replication and transference. As the NSF project proceeds further it allows users to apply for grants or allocation time on the machines and indeed renew these free of cost for researchers and students. 
@@ -123,7 +124,10 @@ python jetstream.py action --username "johndoe" --password "pass" --id "00000" -
 ```
 
 
-I would like to thank my grant from JetStream TG-GEO160014. And I would like to include Jetstream citations for others to use
+I would like to thank my grant from JetStream TG-GEO160014. You can cite this tool as 
+**Samapriya Roy. (2017, August 16). samapriya/jetstream-unofficial-addon: jetstream-unofficial-addon. Zenodo. http://doi.org/10.5281/zenodo.844018**
+
+And I would like to include Jetstream citations for others to use
 
 **Stewart, C.A., Cockerill, T.M., Foster, I., Hancock, D., Merchant, N., Skidmore, E., Stanzione, D., Taylor, J., Tuecke, S., Turner, G., Vaughn, M., and Gaffney, N.I., Jetstream: a self-provisioned, scalable science and engineering cloud environment. 2015, In Proceedings of the 2015 XSEDE Conference: Scientific Advancements Enabled by Enhanced Cyberinfrastructure. St. Louis, Missouri.  ACM: 2792774.  p. 1-8. http://dx.doi.org/10.1145/2792745.2792774**
 
