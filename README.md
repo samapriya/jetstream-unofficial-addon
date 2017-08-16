@@ -125,6 +125,7 @@ python jetstream.py action --username "johndoe" --password "pass" --id "00000" -
 
 
 I would like to thank my grant from JetStream TG-GEO160014. You can cite this tool as 
+
 **Samapriya Roy. (2017, August 16). samapriya/jetstream-unofficial-addon: jetstream-unofficial-addon. Zenodo. http://doi.org/10.5281/zenodo.844018**
 
 And I would like to include Jetstream citations for others to use
