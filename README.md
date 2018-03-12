@@ -138,5 +138,5 @@ and
 
 ## Changelog
 
-### v0.1.2
+#### v0.1.2
 * Converted into install enabled client
